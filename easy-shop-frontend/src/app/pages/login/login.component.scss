@@ -1,0 +1,132 @@
+.login-container {
+  // MAIN
+  overflow-x: hidden;
+  box-sizing: border-box;
+  max-width: 100%;
+  height: 100%;
+  margin: auto;
+  padding: 0;
+  text-align: center;
+  background-color: #2ECC71;
+
+  // LOGO
+  .logo {
+    width: 113px;
+    margin: 2.8rem auto;
+    padding-right: 20px;
+  }
+
+  // LOGIN BACKGROUND (white)
+  .login-background {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    padding: 2.5rem 2rem;
+
+    background-color: #FFFFFF;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+  }
+
+  // Títulos
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #2D2D2D;
+  }
+
+  .subtitle {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #464646;
+  }
+
+  // LOGIN FORM
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    max-width: 360px;
+
+
+    label {
+      align-self: flex-start;
+      margin-bottom: 0.1rem;
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: #464646;
+    }
+
+    input {
+      width: 100%;
+      height: 1.5rem;
+      padding: 0.75rem 1.5rem;
+      margin-bottom: 1.5rem;
+
+      font-size: 1rem;
+      font-weight: 500;
+      color: #C7C7C7;
+
+      background-color: #F2F2F2;
+      border: 1px solid #ffffff;
+      border-radius: 40px;
+      box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .forgot-password {
+      font-size: 1rem;
+      font-weight: 500;
+      color: #464646;
+      text-align: center;
+    }
+  }
+
+  // BUTTONS
+  .buttons {
+    width: 60%;
+    max-width: 360px;
+    margin-top: 2rem;
+
+    .btn {
+      width: 100%;
+      height: 4rem;
+      padding: 0.75rem;
+
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: white;
+
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+
+      &.primary {
+        background-color: #2ECC71;
+      }
+      &.google {
+        background-color: #272727;
+      }
+    }
+
+    .divider {
+      margin: 0.3rem 0;
+      font-size: 0.9rem;
+      color: #464646;
+    }
+  }
+
+  // SIGN UP
+  .signup {
+    margin-top: 2rem;
+
+    a {
+      color: #2e81f4;
+      font-weight: 600;
+      text-decoration: none;
+    }
+  }
+}

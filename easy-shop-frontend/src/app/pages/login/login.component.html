@@ -9,14 +9,15 @@
       <p class="subtitle">Pronto para economizar?</p>
     </div>
 
-    <form>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
       <label for="email">Email</label>
       <input
         id="email"
         type="email"
         name="email"
         placeholder="email@exemplo.com"
-        required
+        formControlName="email"
+        [ngClass]="message ? 'error' : ''"
       />
 
       <label for="password">Senha</label>
@@ -25,17 +26,23 @@
         type="password"
         name="password"
         placeholder="••••"
-        required
+        formControlName="password"
+        [ngClass]="message ? 'error' : ''"
       />
 
+      <div *ngIf="message" class="message-container">
+        <p class="message">{{message}}</p>
+      </div>
+
       <a href="#" class="forgot-password">Esqueceu sua senha?</a>
+
+      <div class="buttons">
+        <button class="btn primary">Entrar</button>
+        <div class="divider">ou</div>
+        <button class="btn google">Entrar com Google</button>
+      </div>
     </form>
 
-    <div class="buttons">
-      <button class="btn primary">Entrar</button>
-      <div class="divider">ou</div>
-      <button class="btn google">Entrar com Google</button>
-    </div>
     <p class="signup">
       Não tem uma conta? <a href="#">Crie uma</a>
     </p>

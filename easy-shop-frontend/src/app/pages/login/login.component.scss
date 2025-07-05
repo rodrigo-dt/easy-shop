@@ -1,3 +1,7 @@
+$green: #2ECC71;
+$bold-text: #2D2D2D;
+$text: #464646;
+
 .login-container {
   // MAIN
   overflow-x: hidden;
@@ -7,7 +11,7 @@
   margin: auto;
   padding: 0;
   text-align: center;
-  background-color: #2ECC71;
+  background-color: $green;
 
   // LOGO
   .logo {
@@ -30,18 +34,17 @@
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
   }
 
-  // Títulos
   h1 {
     font-size: 2.5rem;
     font-weight: 800;
-    color: #2D2D2D;
+    color: $bold-text;
   }
 
   .subtitle {
     margin-bottom: 1rem;
     font-size: 1rem;
     font-weight: 500;
-    color: #464646;
+    color: $text;
   }
 
   // LOGIN FORM
@@ -58,7 +61,7 @@
       margin-bottom: 0.1rem;
       font-size: 1.125rem;
       font-weight: 600;
-      color: #464646;
+      color: $text;
     }
 
     input {
@@ -69,7 +72,7 @@
 
       font-size: 1rem;
       font-weight: 500;
-      color: #464646;
+      color: $text;
 
       background-color: #F2F2F2;
       border: 1px solid #ffffff;
@@ -88,29 +91,49 @@
       }
 
       &:focus {
-        border-color: #2ECC71;
+        border-color: $green;
         box-shadow: 0 0 0 2px rgba(46, 204, 113, 0.2); // efeito glow
         outline: none;
-        color: #464646;
+        color: $text;
 
         &::placeholder {
           opacity: 0;
-          color: #464646;
+          color: $text;
         }
+      }
+
+      &.error {
+        border: 2px solid red;
+        background-color: #fff0f0;
+      }
+    }
+
+    .message-container {
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+      .message {
+        font-size: 1rem;
+        font-weight: 500;
+        color: red;
       }
     }
 
     .forgot-password {
       font-size: 1rem;
       font-weight: 500;
-      color: #464646;
+      color: $text;
       text-align: center;
+    }
+
+    input.ng-touched.ng-invalid{
+      border: 2px solid red;
+      background-color: #fff0f0;
     }
   }
 
   // BUTTONS
   .buttons {
-    width: 60%;
+    width: 90%;
     max-width: 360px;
     margin-top: 2rem;
 
@@ -129,7 +152,7 @@
       transition: background-color 0.6s ease, transform 0.6s ease, box-shadow 0.3s ease;
 
       &.primary {
-        background-color: #2ECC71;
+        background-color: $green;
 
         // "Entrar" button selected
         &:hover {
@@ -156,7 +179,7 @@
     .divider {
       margin: 0.3rem 0;
       font-size: 1rem;
-      color: #464646;
+      color: $text;
     }
   }
 
